@@ -164,7 +164,7 @@ class EconomyJob extends PluginBase implements Listener{
 					break;
 					
 					case "1";
-					$player->sendMessage("§l§7[§6Jobs§7] §aอาชีพของคุณคือ : ".$this->player->get($player->getName()));
+					$player->sendMessage("§l§7[§6Jobs§7] §aYour career is : ".$this->player->get($player->getName()));
 					break;
 					
 					case "2";
@@ -174,18 +174,18 @@ class EconomyJob extends PluginBase implements Listener{
 					case "3";
 					$job = $this->player->get($player->getName());
 					$this->player->remove($player->getName());
-					$player->sendMessage("§l§7[§6Jobs§7] §cคุณได้ลาออกจากอาชีพ \"$job\"");
+					$player->sendMessage("§l§7[§6Jobs§7] §cYou have quit your career. \"$job\"");
 					break;
 					
 				}
 			});
 			$form->setTitle("§7EconomyJobUI V2");
 			$job = $this->player->get($player->getName());
-			$form->setContent("อาชีพของคุณ : $job");
-			$form->addButton("Join\nสมัคอาชีพ", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("Status\nดูอาชีพของคุณ", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("About\nเกี่ยวกับ , เครดิต", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("Retire\nลาออกจากอาชีพ", 1, "http://avengetech.me/items/271-0.png");
+			$form->setContent("Your Job : $job");
+			$form->addButton("Join\nApply for a job", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("Status\nSee your career", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("About\n about, career", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("Retire\n Resign from this career", 1, "http://avengetech.me/items/271-0.png");
 			$form->sendToPlayer($player);
 			return $form;
 	}
@@ -200,33 +200,33 @@ class EconomyJob extends PluginBase implements Listener{
 				switch($result){
 					case "0";
 					$this->player->set($player->getName(), "tree-cutter");
-					$player->sendMessage("§l§7[§6Jobs§7] §aคุณได้ทำการสมัคอาชีพ §eTree-Cutter");
+					$player->sendMessage("§l§7[§6Jobs§7] §a You have made a professional recruitment §eTree-Cutter");
 					break;
 					
 					case "1";
 					$this->player->set($player->getName(), "miner");
-					$player->sendMessage("§l§7[§6Jobs§7] §aคุณได้ทำการสมัคอาชีพ §eMiner");
+					$player->sendMessage("§l§7[§6Jobs§7] §aYou have made a professional recruitment §eMiner");
 					break;
 					
 					case "2";
 					$this->player->set($player->getName(), "melon");
-					$player->sendMessage("§l§7[§6Jobs§7] §aคุณได้ทำการสมัคอาชีพ §eMelon");
+					$player->sendMessage("§l§7[§6Jobs§7] §aYou have made a professional recruitment §eMelon");
 					break;
 					
 					case "3";
 					$this->player->set($player->getName(), "pumpkin");
-					$player->sendMessage("§l§7[§6Jobs§7] §aคุณได้ทำการสมัคอาชีพ §ePumpkin");
+					$player->sendMessage("§l§7[§6Jobs§7] §aYou have made a professional recruitment §ePumpkin");
 					break;
 					
 					case "4";
 					$this->player->set($player->getName(), "flower");
-					$player->sendMessage("§l§7[§6Jobs§7] §aคุณได้ทำการสมัคอาชีพ §eFlower");
+					$player->sendMessage("§l§7[§6Jobs§7] §aYou have made a professional recruitment §eFlower");
 					break;
 					
 				}
 			});
-			$form->setTitle("§7SugarPocket Job");
-			$form->addButton("Tree-Cutter\n2$", 1, "http://avengetech.me/items/17-0.png");
+			$form->setTitle("§bFCPE Job");
+			$form->addButton("WoodCutter\n2$", 1, "http://avengetech.me/items/17-0.png");
 			$form->addButton("Miner\n$1", 1, "http://avengetech.me/items/1-0.png");
 			$form->addButton("Melon\n5$", 1, "http://avengetech.me/items/103-0.png");
 			$form->addButton("Pumpkin\n5$", 1, "http://avengetech.me/items/86-0.png");
@@ -249,7 +249,7 @@ class EconomyJob extends PluginBase implements Listener{
 			}
 		});
 		$form->setTitle("Job Info");
-		$form->setContent("EconomyJob UI\n\nCreate By Ookittisako0\nCr.onebone\nMyServer\n\nIP: sgpk.ddns.net\nPort 19132\nVersion 1.5.3\n\n§c**No Edit File Config.yml**");
+		$form->setContent("EconomyJob UI\n\nCreated For FCPE NETWORK**");
 		$form->addButton("Okey!");	
 		$form->sendToPlayer($player);
 	}
